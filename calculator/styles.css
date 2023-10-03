@@ -1,0 +1,77 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+ .num{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fb8500;
+    padding: 10px;
+}
+
+.container .num > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 10px;
+}
+
+.container .num > button:hover{
+    background-color: rgba(207, 210, 205, 0.5);;
+}
+
+.container .num .icon{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0, .8);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.output .previous-output{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-output{
+    color: #fff;
+    font-size: 2.5rem;
+}
